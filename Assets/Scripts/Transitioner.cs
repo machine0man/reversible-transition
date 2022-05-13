@@ -5,12 +5,10 @@ namespace Nature
     public class Transitioner : MonoBehaviour
     {
 
-        [SerializeField] QuadGenerator m_quadGen1;
-        [SerializeField] QuadGenerator m_quadGen2;
-
-        [SerializeField] int n;
-
+        [SerializeField] ImageMaker m_imgMaker;
         [SerializeField] [Range(0f, 1f)] float m_T;
+
+        int m_QuadsCountAlongWidth => m_imgMaker.QuadsCountAlongWidth;
 
 
         private void Update()
@@ -20,16 +18,15 @@ namespace Nature
 
         void DoTransition()
         {
-            var l_QuadsList1 = m_quadGen1.QuadsList;
-            var l_QuadsList2 = m_quadGen2.QuadsList;
+            var l_QuadsList1 = m_imgMaker.QuadList1;
+            var l_QuadsList2 = m_imgMaker.QuadList2;
 
-
-            float limit = Mathf.Lerp(0,n,m_T);
+            float limit = Mathf.Lerp(0,m_QuadsCountAlongWidth,m_T);
             int flooredLimit = Mathf.FloorToInt(limit);
 
-            for (int i = 0; i < n; i++)
+            for (int i = 0; i < m_QuadsCountAlongWidth; i++)
             {
-                for (int j = i; j < l_QuadsList1.Count; j += n)
+                for (int j = i; j < l_QuadsList1.Count; j += m_QuadsCountAlongWidth)
                 {
                     var go1 = l_QuadsList1[j];
                     var go2 = l_QuadsList2[j];
@@ -53,7 +50,6 @@ namespace Nature
                         go1.transform.rotation = Quaternion.Euler(0f, angle, 0f);
                         go2.transform.rotation = Quaternion.Euler(0f, 180 - angle, 0f);
                     }
-
                 }
             }
         }

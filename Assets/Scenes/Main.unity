@@ -328,9 +328,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed456d3cff46fc24a9ced5ccb3803f01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_quadGen1: {fileID: 1782178820}
-  m_quadGen2: {fileID: 1698247369}
-  n: 20
+  m_imgMaker: {fileID: 1287963569}
   m_T: 0
 --- !u!4 &997973364
 Transform:
@@ -340,58 +338,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 997973362}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.977123, y: 1.2074965, z: -3.1808558}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1698247368
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1698247370}
-  - component: {fileID: 1698247369}
-  m_Layer: 0
-  m_Name: QuadGenerator_Back
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1698247369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698247368}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33819135206fd474b9616827406c0e68, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_prefQuad: {fileID: 2169735412460485091, guid: d954de05efac50a4b9ea46c4a47e3913, type: 3}
-  m_IsBackOne: 1
---- !u!4 &1698247370
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1698247368}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1782178819
+--- !u!1 &1287963568
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -399,36 +352,38 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1782178821}
-  - component: {fileID: 1782178820}
+  - component: {fileID: 1287963570}
+  - component: {fileID: 1287963569}
   m_Layer: 0
-  m_Name: QuadGenerator
+  m_Name: ImageMaker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1782178820
+--- !u!114 &1287963569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782178819}
+  m_GameObject: {fileID: 1287963568}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 33819135206fd474b9616827406c0e68, type: 3}
+  m_Script: {fileID: 11500000, guid: 043cda4ee3c3e1842afa70628cece46a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_prefQuad: {fileID: 2169735412460485091, guid: e003ec31b21f1b54ea9c1068dfb3161a, type: 3}
-  m_IsBackOne: 0
---- !u!4 &1782178821
+  m_prefQuad1: {fileID: 2169735412460485091, guid: e003ec31b21f1b54ea9c1068dfb3161a, type: 3}
+  m_prefQuad2: {fileID: 2169735412460485091, guid: d954de05efac50a4b9ea46c4a47e3913, type: 3}
+  m_quadsCountAlongWidth: 40
+  m_imgWidth: 10
+--- !u!4 &1287963570
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1782178819}
+  m_GameObject: {fileID: 1287963568}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
